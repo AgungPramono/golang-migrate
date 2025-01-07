@@ -29,8 +29,20 @@ migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_mig
 ```
 *   misal jumlah migrasi 2: maka 2 migrasi up dari atas akan dijalankan
 
-  6. Rollback ke versi tertentu
+6. Rollback ke versi tertentu
 
 ```shell
 migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_migration" -path db/migrations down <jumlah migrasi>
+```
+*   misal jumlah migrasi 2: maka 2 migrasi down dari bawah akan dijalankan
+
+7. Cek versi migrasi
+```shell
+migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_migration" -path db/migrations version
+```
+8. Fix dirty state / mengubah versi migrasi
+```shell
+migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_migration" -path force <version sebelum state dirty>
+contoh : 
+migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_migration" -path db/migrations force 20250107101630
 ```
