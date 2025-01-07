@@ -16,3 +16,8 @@ migrate create -ext sql -dir db/migrations create_table_category
 ```sql
 migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_migration" -path db/migrations up
 ```
+4.  Rollback database migration
+
+```shell
+migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_migration" -path db/migrations down
+```
