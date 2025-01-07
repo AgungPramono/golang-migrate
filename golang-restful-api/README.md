@@ -46,3 +46,4 @@ migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_mig
 contoh : 
 migrate -database "mysql://root:admin123@tcp(localhost:3306)/golang_database_migration" -path db/migrations force 20250107101630
 ```
+* setelah selesai, kemudian perbaiki file migration dan jalankan kembali migration up
