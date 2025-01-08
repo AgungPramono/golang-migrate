@@ -14,12 +14,12 @@ Content-Type: application/json
 }
 
 ### GET category by Id
-GET http://localhost:3000/api/categories/8
+GET http://localhost:3000/api/categories/2
 X-API-KEY: SECRET
 Accept: application/json
 
 ### Update Category By Id
-PUT http://localhost:3000/api/categories/8
+PUT http://localhost:3000/api/categories/2
 X-API-KEY: SECRET
 Content-Type: application/json
 Accept: application/json
@@ -29,6 +29,6 @@ Accept: application/json
 }
 
 ### Delete category by Id
-DELETE http://localhost:3000/api/categories/1
+DELETE http://localhost:3000/api/categories/2
 X-API-KEY: SECRET
 Accept: application/json
